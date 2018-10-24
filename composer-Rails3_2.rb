@@ -170,7 +170,7 @@ def copy_from(source, destination)
 end
 
 def copy_from_repo(filename, opts = {})
-  repo = 'https://raw.github.com/RailsApps/rails-composer/master/files/'
+  repo = 'https://raw.github.com/sbouchaala/rails-composer/master/files/'
   repo = opts[:repo] unless opts[:repo].nil?
   if (!opts[:prefs].nil?) && (!prefs.has_value? opts[:prefs])
     return
@@ -324,7 +324,7 @@ say_recipe 'git'
 say_wizard "initialize git"
 prefs[:git] = true unless prefs.has_key? :git
 if prefer :git, true
-  copy_from 'https://raw.github.com/RailsApps/rails-composer/master/files/gitignore.txt', '.gitignore'
+  copy_from 'https://raw.github.com/sbouchaala/rails-composer/master/files/gitignore.txt', '.gitignore'
   git :init
   git :add => '-A'
   git :commit => '-qm "rails_apps_composer: initial commit"'
