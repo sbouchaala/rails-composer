@@ -7,6 +7,6 @@ myapp=$1
 
 mkdir $myapp
 cd $myapp
-rvm use ruby-2.1.1@$myapp --ruby-version --create
+rvm use ruby-2.5.1@$myapp --ruby-version --create
 gem install rails
-rails new . -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+rails new . -m https://raw.github.com/sbouchaala/rails-composer/master/composer.rb
